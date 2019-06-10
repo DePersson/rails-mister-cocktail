@@ -1,11 +1,21 @@
+<!-- Show all drinks and possibility to add a new drink -->
+
 <div class="container">
   <div class="card">
-    <ul class="list-group">
-      <% @cocktails.each do |cocktail| %>
-          <li class="list-group "><%=link_to cocktail.name, cocktail_path(cocktail)%>
-          </li>
-      <% end %>
-      <br>
-
+    <div class="card-title">
+      <h2>Our menu:</h2>
+      <p><%= link_to 'Add new a drink', new_cocktail_path %></p>
+    </div>
+    <%@cocktails.each do |cocktail|%>
+    <div class="card">
+      <div class="drinks-card">
+      <p class="d-flex justify-content-between align-items-center"><strong><%= cocktail.name %></strong></p>
+      <!-- Add description and ingredients as I go along TODO -->
+    </div>
+    </div>
+    <% end %>
   </div>
-<%= link_to 'Show all drinks', 'www.dif.se' %>
+</div>
+
+
+

@@ -1,17 +1,17 @@
-<nav class="navbar navbar-dark bg-dark">
-  <span class="navbar-brand mb-0 h1"><h1>Cocktail show<%=@cocktail.name%></h1></span>
-</nav>
+<!-- Supposed to show one drink -->
+
+<h3>Name of the drink</h3>
 <div class="container">
   <div class="card">
-    <p>Our address is: <strong><%=@restaurant.address%></strong></p>
-    <p>Our phone number is: <strong><%=@restaurant.phone_number%></strong></p>
-    <p>We serve <strong><%=@restaurant.category%></strong> food.</p>
-    <p class="d-flex justify-content-between align-items-center">Please have a look at our reviews:<span class="Headline">Rating:</span></p>
-    <%@restaurant.reviews.each do |review|%>
-    <div class="card" style="margin: 10px; height: 50px; justify-content: center; padding: 10px;">
-      <p class="d-flex justify-content-between align-items-center"><%= review.content %>
-      <span class="badge badge-primary badge-pill"><%= review.rating %></span></p></div>
-      <% end %>
-    <%= link_to 'Add review', new_restaurant_review_path(@restaurant)%>
+    <p class="d-flex justify-content-between align-items-center">Description</p>
+    <%@cocktail.ingredients.each do |ingredient|%>
+    <div class="card" style="margin: 10px; height: 50px; justify-content: center; padding: 25px;">
+
+      <p class="d-flex justify-content-between align-items-center"><%= ingredient.content %></p>
+    </div>
+    <% end %>
   </div>
 </div>
+
+
+
