@@ -32,7 +32,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.9.1'
 
 # Carriewave is a gem to upload files associated to Models.
-gem 'carrierwave', '~> 1.2'
+gem 'carrierwave', '~> 1.3'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
